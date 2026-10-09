@@ -3,7 +3,6 @@ import { useState } from 'react';
 interface PropFirm {
   id: string;
   name: string;
-  maxLeverage: string;
   profitSplit: string;
   minChallengeFee: string;
   affiliateUrl: string;
@@ -12,31 +11,28 @@ interface PropFirm {
 
 const PROP_FIRMS: PropFirm[] = [
   {
-    id: 'funding-pips',
-    name: 'FundingPips',
-    maxLeverage: '1:100',
-    profitSplit: 'Up to 90%',
-    minChallengeFee: '$32',
-    affiliateUrl: 'YOUR_FUNDINGPIPS_AFFILIATE_LINK_HERE',
-    badge: 'Most Popular'
+    id: "funding-pips",
+    name: "FundingPips",
+    profitSplit: "Up to 90%",
+    minChallengeFee: "$32",
+    affiliateUrl: "https://fundingpips.com",
+    badge: "Most Popular",
   },
   {
-    id: 'ftmo',
-    name: 'FTMO',
-    maxLeverage: '1:100',
-    profitSplit: '80% - 90%',
-    minChallengeFee: '€155',
-    affiliateUrl: 'YOUR_FTMO_AFFILIATE_LINK_HERE'
+    id: "ftmo",
+    name: "FTMO",
+    profitSplit: "80% - 90%",
+    minChallengeFee: "€155",
+    affiliateUrl: "https://ftmo.com",
   },
   {
-    id: 'funded-next',
-    name: 'FundedNext',
-    maxLeverage: '1:100',
-    profitSplit: 'Up to 95%',
-    minChallengeFee: '$49',
-    affiliateUrl: 'YOUR_FUNDEDNEXT_AFFILIATE_LINK_HERE',
-    badge: 'High Profit Split'
-  }
+    id: "funded-next",
+    name: "FundedNext",
+    profitSplit: "Up to 95%",
+    minChallengeFee: "$49",
+    affiliateUrl: "https://fundednext.com",
+    badge: "High Profit Split",
+  },
 ];
 
 export default function App() {
@@ -50,7 +46,10 @@ export default function App() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', fontFamily: 'sans-serif' }}>
       <h1>Prop Firm Risk & Position Calculator</h1>
-      <p>Calculate your exact lot size and compare top funded account challenges.</p>
+      <p>
+        Estimate your lot size using a $10 pip value per standard lot (common for USD-quoted forex
+        pairs), and compare top funded account challenges.
+      </p>
 
       {/* Calculator Inputs */}
       <div style={{ background: '#f5f5f5', padding: '20px', borderRadius: '8px', marginBottom: '30px' }}>
@@ -91,7 +90,7 @@ export default function App() {
             <h2>${riskAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</h2>
           </div>
           <div>
-            <small>Recommended Lot Size</small>
+            <small>Estimated Lot Size</small>
             <h2>{lotSize.toFixed(2)} Lots</h2>
           </div>
         </div>
