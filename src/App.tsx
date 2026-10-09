@@ -30,7 +30,7 @@ const PROP_FIRMS: PropFirm[] = [
     name: "FundedNext",
     profitSplit: "Up to 95%",
     minChallengeFee: "$49",
-    affiliateUrl: "https://fundednext.com",
+    affiliateUrl: "https://fundednext.com/?fpr=PROPRISK",
     badge: "High Profit Split",
   },
 ];
